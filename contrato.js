@@ -3,7 +3,9 @@ const contratoInterface__Post={
       content: String,
       urlImagePost: String,
       urlImageUser: String,
-      nameUser: String
+      nameUser: String,
+      createdDate: String,
+      likes: Number
 }
 
 const baseUrl = 'https://desafiojsequipo1-default-rtdb.firebaseio.com/';
