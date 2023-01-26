@@ -22,15 +22,16 @@
       <div class="col-md-4"></div>
     </header>
     <main class="row container ms-auto me-auto">
+      <input type="text" class="w-50 rounded m-2" id="nameUser" placeholder="NameUser">
       <div style="height: 76vh;" class="col-12 col-md-7 border bg-white rounded">
           <div style="height: 35vh;" class="bg-white w-100"> 
-            <input class="mt-2 rounded" type="text" placeholder="URL imagePost">
-            <input style="outline: none;" type="text" class="mt-2 fs-1 bolder border-0 bg-transparent" placeholder="New Post Title here...">
+            <input class="mt-2 rounded" type="text" id='urlImagePost' placeholder="URL imagePost">
+            <input style="outline: none;" type="text" id="title" class="mt-2 fs-1 bolder border-0 bg-transparent" placeholder="New Post Title here...">
             
           </div>
           <div style="height: 35vh;" class="bg-white w-100">
-            <input class="mt-2 rounded" type="text" placeholder="URL imageUser">
-            <textarea style="outline: none; resize: none;" class="border-0 bg-transparent w-100" placeholder="write your post content here..." name="" id="" cols="30" rows="10"></textarea>
+            <input class="mt-2 rounded" type="text" id="urlImageUser" placeholder="URL imageUser">
+            <textarea style="outline: none; resize: none;" class="border-0 bg-transparent w-100 mt-2" placeholder="write your post content here..." name="" id="content" cols="30" rows="10"></textarea>
           </div>
       </div>
       <div style="height: 76vh;" class="d-none d-md-flex col-md-4 flex-column align-items-center justify-content-center">
@@ -40,7 +41,7 @@
       </div>
     </main>
     <footer class="mt-2 container">
-      <button class="btn btn-primary">Publish</button>
+      <button class="btn btn-primary" id="publishButon">Publish</button>
       <button class="btn btn-light">Save <span class="d-none d-md-inline">draft</span></button>
       <button class="btn btn-light"><img src="../Assets/Imagenes/imageFooter1.png" alt="Post Options"></button>
       <button class="btn btn-light">Revert <span class="d-none d-md-inline">new changes</span></button>
