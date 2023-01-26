@@ -20,4 +20,6 @@ const getData = async(id) => {
    }
 }
 
-getData(id)
+const dataPost = await getData(id)
+
+console.log(`Mis datos: ${dataPost}`)
