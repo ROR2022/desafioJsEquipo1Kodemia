@@ -22,4 +22,16 @@ const getData = async(id) => {
 
 const dataPost = await getData(id)
 
-console.log(`Mis datos: ${dataPost}`)
+console.log(`Mis datos:`,dataPost)
+
+const imagePost = document.querySelector('#imagePost');
+const userName = document.querySelector('#userName');
+const postTitle = document.querySelector('#postTitle');
+const imageUser = document.querySelector('#urlImageUser');
+const contentPost = document.querySelector('#content');
+
+imagePost.src = dataPost.urlImagePost
+userName.textContent = dataPost.nameUser
+postTitle.textContent = dataPost.title
+imageUser.src = dataPost.urlImageUser
+contentPost.textContent = dataPost.content
