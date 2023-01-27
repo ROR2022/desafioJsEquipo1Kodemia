@@ -9,7 +9,14 @@ const publicar = document.querySelector('#save');
 
 
 /*GET_DATA(Img_Post,UserImage,WritePost,NewPost); */
-const id_post = "-NMjuod7T9VC9z54blCk";
+const mySearch = window.location.search;
+const tempobj = new URLSearchParams(mySearch);
+const targetID = tempobj.get('id');
+console.log('targetID:',targetID);
+
+
+
+const id_post = targetID;
 const get_Data = await GET_DATA(id_post);  
 console.log("get data console", get_Data); 
 titlePost.value = get_Data.title;

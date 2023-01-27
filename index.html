@@ -261,17 +261,21 @@
         <div class="articles">
           <!-- Articulo 1 -->
           <article class="card m-3 " >
-            <img src="../Assets/Imagenes/article-cover.webp" class="card-img-top" alt="image article">
-            <div class="card-body">
+            <img src="../Assets/Imagenes/article-cover.webp" id="imgPrincipal" class="card-img-top" alt="image article">
+            <div class="card-body w-100">
               <div class="card__userDetails d-flex align-items-center mb-2">
-                <img src="../Assets/Imagenes/vincent.webp" alt="profile picture">
+                <img src="../Assets/Imagenes/vincent.webp" id="imgUser" alt="profile picture">
                 <div class="d-flex flex-column">
-                  <p class="fw-bold">Vincent Will</p>
+                  <p class="fw-bold" id="userName">Vincent Will</p>
                   <p class="time">Posted on 16 nov</p>
+                </div>
+                <div class="ms-auto">
+                  <button class="btn btn-info" id="editPost">✏️</button>
+                  <button class="btn btn-danger" id="deletePost">🗑️</button>
                 </div>
               </div>
               <a href="./src/article.html">
-                <h3 class="card-title ms-4">Weekly web development resources #124</h4>
+                <h3 class="card-title ms-4" id="titlePost">Weekly web development resources #124</h4>
               </a>
               <ul class="d-flex flex-wrap p-0 ms-4">
                 <li>
