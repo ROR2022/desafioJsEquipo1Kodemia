@@ -1,5 +1,5 @@
 
-const URL_GLOBAL = 'https://kodemia-1543c-default-rtdb.firebaseio.com/';
+const URL_GLOBAL = 'https://desafiojsequipo1-default-rtdb.firebaseio.com/';
 
 
 
@@ -22,14 +22,15 @@ const DELETE_ITEM = async (id) => {
 }
 
 
-const EDIT_ITEM = async (Object) => {
+const EDIT_ITEM = async (obj,id) => {
     try{
-    const response = await fetch(`${URL_GLOBAL}-NMaO5gXVdBVykcxE3_P.json`, {
+    const response = await fetch(`${URL_GLOBAL}${id}.json `, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object),
+        body: JSON.stringify(obj),
     });
     const data = await response.json();
+    console.log("hola desde aqui",data);
     return data;
    
 }
@@ -39,16 +40,13 @@ const EDIT_ITEM = async (Object) => {
     }
 }
 
-const GET_DATA = async (Img_Post,UserImage,WritePost,NewPost) => {
+const GET_DATA = async (id) => {
     try{
-        const response = await fetch(`${URL_GLOBAL}-NMaO5gXVdBVykcxE3_P.json`)
+        const response = await fetch(`${URL_GLOBAL}${id}.json`)
         const data = await response.json();
-        console.log(data);
-        Img_Post.value = data.Img_Post;
-        UserImage.value = data.UserImage;
-        WritePost.value = data.WritePost;
-        NewPost.value = data.NewPost;
-
+        console.log("function get data ",data);
+        return data;
+        
 
     }
     catch{
